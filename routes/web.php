@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,11 +16,10 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])
-    ->name('home');
+Route::get('/', [App\Http\Controllers\MainController::class, 'index'])
+    ->name('main');
 
-Route::get('/product/{id}', [App\Http\Controllers\ProductController::class, 'index'])
-    ->name('product');
+Route::get('/{page}', [App\Http\Controllers\BlogController::class, 'index'])
+    ->name('page');
 
-Route::get('/admin/product/{id}', [App\Http\Controllers\ProductController::class, 'index'])
-    ->name('admin.product');
+

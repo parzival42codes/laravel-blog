@@ -11,7 +11,7 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.sass('resources/sass/app.scss', '/storage/styles/app.css')
+mix.sass('resources/sass/app.scss', '/storage/styles')
     .combine([
             'node_modules/jquery/dist/jquery.min.js',
             'node_modules/jquery-ui-dist/jquery-ui.min.js',
@@ -21,5 +21,10 @@ mix.sass('resources/sass/app.scss', '/storage/styles/app.css')
             'node_modules/parsleyjs/dist/i18n/de.js',
             'resources/js/webmix.js',
         ],
-        'storage/app/public/js/app.js')
+        'storage/app/public/js/app.js').combine([
+        'storage/app/public/styles/app.css',
+        'node_modules/bootstrap/dist/css/bootstrap.min.css',
+        'node_modules/jquery-ui-dist/jquery-ui.min.css',
+    ],
+    'storage/app/public/styles/appCombine.css')
     .sourceMaps();

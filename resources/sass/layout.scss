@@ -1,0 +1,27 @@
+
+#app {
+  #app--header {
+    display: flex;
+  }
+
+  #app--container {
+    display: flex;
+
+    #app--container-left {
+      flex: 1;
+    }
+
+    #app--container-center {
+      flex: 1;
+    }
+
+    #app--container-right {
+      flex: 1;
+    }
+
+  }
+
+  #app--footer {
+    display: flex;
+  }
+}

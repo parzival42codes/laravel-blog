@@ -1,33 +1,25 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@include('layouts.header')
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-    @if(config('view.mode') === 'vite')
-        <!-- Scripts -->
-        @vite(['resources/js/app.js'])
-    @endif
-
-    @if(config('view.mode') === 'webmix')
-        <script src="{{ asset('/storage/js/app.js') }}" defer></script>
-        <link href="{{ asset('/storage/styles/app.css') }}" rel="stylesheet">
-    @endif
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
-    <!-- Styles -->
-
-</head>
 <body>
 <div id="app">
-    <main class="py-4">
-        @yield('content')
+    <main>
+        <div id="app--header">
+            @yield('app--header')
+        </div>
+        <div id="app--container">
+            <div id="app-container-left">
+                @yield('app-container-left')
+            </div>
+            <div id="app-container-center">
+                @yield('app-container-center')
+            </div>
+            <div id="app-container-right">
+                @yield('app-container-right')
+            </div>
+        </div>
+        <div id="app--footer">
+            @yield('app--footer')
+        </div>
     </main>
 </div>
 </body>
