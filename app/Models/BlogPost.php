@@ -2,16 +2,14 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
 
-class BlogItem extends Model
+class BlogPost extends Model
 {
-    public const DBNAME = 'blog_items';
+    use HasFactory;
+
+    public const DBNAME = 'blog_post_items';
 
     protected $table = self::DBNAME;
 
@@ -21,9 +19,10 @@ class BlogItem extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'user',
+        'post_title',
+        'post_content',
+        'post_status',
     ];
 
 
