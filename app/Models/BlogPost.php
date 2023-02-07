@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enum\Model\BlogPost\StatusEnum;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -12,6 +13,10 @@ class BlogPost extends Model
     public const DBNAME = 'blog_post_items';
 
     protected $table = self::DBNAME;
+
+    protected $casts = [
+        'post_status' => StatusEnum::class,
+    ];
 
     /**
      * The attributes that are mass assignable.

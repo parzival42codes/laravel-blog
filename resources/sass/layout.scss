@@ -2,26 +2,32 @@
 #app {
   #app--header {
     display: flex;
+    border: 1px black;
   }
 
   #app--container {
     display: flex;
+    border: 1px black;
 
     #app--container-left {
       flex: 1;
+      border: 1px black;
     }
 
     #app--container-center {
       flex: 1;
+      border: 1px black;
     }
 
     #app--container-right {
       flex: 1;
+      border: 1px black;
     }
 
   }
 
   #app--footer {
     display: flex;
+    border: 1px black;
   }
 }

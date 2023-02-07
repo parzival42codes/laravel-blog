@@ -25,9 +25,9 @@ return new class extends Migration {
             $table->text('post_title');
             $table->longText('post_content');
             $table->enum('post_status',[
-                StatusEnum::DRAFT,
-                StatusEnum::PUBLISHED,
-                StatusEnum::HIDDEN,
+                'draft',
+                'published',
+                'hidden',
             ])
                 ->index();
             $table->text('post_password')

@@ -4,7 +4,7 @@ namespace App\Enum\Model\BlogPost;
 
 enum StatusEnum:string
 {
-    case DRAFT = 'draft';
-    case PUBLISHED = 'published';
-    case HIDDEN = 'hidden';
+    case Draft = 'draft';
+    case Published = 'published';
+    case Hidden = 'hidden';
 }
