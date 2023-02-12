@@ -1,0 +1,23 @@
+
+#app {
+    #app--header {
+    }
+
+    #app--container {
+
+        #app--container-left {
+            flex: 2;
+        }
+
+        #app--container-center {
+            flex: 7;
+        }
+
+        #app--container-right {
+            flex: 1;
+        }
+    }
+
+    #app--footer {
+    }
+}

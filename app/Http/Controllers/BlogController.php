@@ -24,7 +24,7 @@ class BlogController extends Controller
      */
     public function index(string|null $page):Renderable
     {
-        d($page);
+//        d($page);
         return view('themes.'.config('theme.select').'.main');
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\BlogPost;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 
@@ -21,8 +22,15 @@ class MainController extends Controller
      *
      * @return Renderable
      */
-    public function index():Renderable
+    public function index(): Renderable
     {
-        return view('themes.'.config('theme.select').'.main');
+        $data = [];
+
+        $blogPosts = BlogPost::paginate(15)->withPath(route('main'));
+        $data['blogPosts'] = $blogPosts;
+
+        d($blogPosts->links());
+
+        return view('themes.' . config('theme.select') . '.main', $data);
     }
 }

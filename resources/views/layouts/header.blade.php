@@ -8,15 +8,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-    @if(config('view.mode') === 'vite')
-        <!-- Scripts -->
-        @vite(['resources/js/app.js'])
-    @endif
 
-    @if(config('view.mode') === 'webmix')
-        <script src="{{ asset('/storage/js/app.js') }}" defer></script>
-        <link href="{{ asset('/storage/styles/appCombine.css') }}" rel="stylesheet">
-    @endif
+    <script src="{{ asset('/storage/js/app.js') }}" defer></script>
+    <link href="{{ asset('/storage/styles/appCombine.css') }}" rel="stylesheet">
+    <link href="{{ asset('/storage/styles/theme/'.config('theme.select').'/theme.css') }}" rel="stylesheet">
 
     @stack('include-scripts')
 
