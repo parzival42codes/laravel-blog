@@ -12,6 +12,7 @@ const mix = require('laravel-mix');
  */
 
 mix.sass('resources/sass/app.scss', '/storage/styles')
+    .sass('resources/sass/theme/default/theme.scss', '/storage/styles/theme/default')
     .combine([
             'node_modules/jquery/dist/jquery.min.js',
             'node_modules/jquery-ui-dist/jquery-ui.min.js',
