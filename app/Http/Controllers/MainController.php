@@ -29,8 +29,6 @@ class MainController extends Controller
         $blogPosts = BlogPost::paginate(15)->withPath(route('main'));
         $data['blogPosts'] = $blogPosts;
 
-        d($blogPosts->links());
-
         return view('themes.' . config('theme.select') . '.main', $data);
     }
 }

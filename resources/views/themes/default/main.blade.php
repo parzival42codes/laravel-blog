@@ -17,6 +17,7 @@
     <div class="container">
         @foreach ($blogPosts as $blogPost)
             <div>
+                @include('themes.'.config('theme.select').'.partials.main.post')
                 {{ $blogPost->post_title }}
             </div>
         @endforeach
