@@ -5,6 +5,13 @@
 ## ToDo:
 - leasot 'app/**/*.php' ( https://github.com/pgilad/leasot )
 
+## Language
+
+php artisan translation:list-missing-translation-keys
+php artisan translation:sync-translations
+php artisan translation:sync-translations database file all
+php artisan translation:sync-translations file database all
+
 # Database
 
 ## Migrate Database

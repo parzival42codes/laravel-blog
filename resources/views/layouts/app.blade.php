@@ -22,5 +22,8 @@
         </div>
     </main>
 </div>
+
+<x-laravel-cookies-consent></x-laravel-cookies-consent>
+
 </body>
 </html>

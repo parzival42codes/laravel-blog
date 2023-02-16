@@ -7,9 +7,7 @@
 @endsection
 
 @section('app--container-left')
-
-    Foo
-
+    @widget('app--container-left')
 @endsection
 
 @section('app--container-center')

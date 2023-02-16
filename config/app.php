@@ -1,5 +1,6 @@
 <?php
 
+use App\Providers\BladeServiceProvider;
 use Illuminate\Support\Facades\Facade;
 
 return [
@@ -82,7 +83,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'de',
 
     /*
     |--------------------------------------------------------------------------
@@ -171,6 +172,7 @@ return [
         Illuminate\Auth\Passwords\PasswordResetServiceProvider::class, Illuminate\Session\SessionServiceProvider::class,
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class, Illuminate\View\ViewServiceProvider::class,
+        BladeServiceProvider::class,
 
         /*
          * Package Service Providers...
