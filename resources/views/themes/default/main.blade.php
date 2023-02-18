@@ -7,7 +7,7 @@
 @endsection
 
 @section('app--container-left')
-    @widget('app--container-left')
+    {!! \App\Helpers\WidgetHelper::getWidget('app--container-left') !!}
 @endsection
 
 @section('app--container-center')
@@ -16,7 +16,6 @@
         @foreach ($blogPosts as $blogPost)
             <div>
                 @include('themes.'.config('theme.select').'.partials.main.post')
-                {{ $blogPost->post_title }}
             </div>
         @endforeach
     </div>

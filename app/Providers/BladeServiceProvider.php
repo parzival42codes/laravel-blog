@@ -11,6 +11,7 @@ use Auth;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Str;
+use View;
 
 class BladeServiceProvider extends ServiceProvider
 {
@@ -31,14 +32,9 @@ class BladeServiceProvider extends ServiceProvider
     public function boot(): void
     {
 
-        Blade::directive('widget', function ($expression) {
-            $widget = Widget::where('ident','=',$expression)->firstOrFail();
-
-            d($widget);
-            die();
-
-            return '<?php  ?>';
-        });
+//        Blade::directive('widget', function ($expression) {
+/*            return '<?php  ?>';*/
+//        });
 
     }
 

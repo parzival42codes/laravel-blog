@@ -15,8 +15,9 @@ php artisan translation:sync-translations file database all
 # Database
 
 ## Migrate Database
+- php artisan migrate:fresh
 - php artisan customMigrate:migrateDirectories
-- php artisan migrate --seed
+- php artisan db:seed
 
 
 ## Backup and Restore Database

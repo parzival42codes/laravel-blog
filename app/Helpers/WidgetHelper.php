@@ -2,14 +2,21 @@
 
 namespace App\Helpers;
 
-use Cache;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Support\Collection;
+use App\Models\Widget;
+use View;
 
 class WidgetHelper
 {
-    public static function eloquentBuilder(Builder $builder)
+    public static function getWidget(string $ident): string
     {
+        $widget = Widget::view($ident);
+        d($widget);
 
+        if (!$widget) {
+            return View::make('error.widgetNotFound', [
+                'ident' => $ident,
+            ])->render();
+        }
+        die();
     }
 }
